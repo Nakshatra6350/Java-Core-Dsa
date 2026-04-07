@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        //also known as sinking sort and exchange sort
         int[] arr = {2,6,3,9,6,2,1};
         System.out.println(Arrays.toString(insertionSort(arr)));
     }
