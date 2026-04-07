@@ -2,10 +2,12 @@ package dsa.day4Sorting;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr = {2,6,3,9,6,2,1};
-        System.out.println(Arrays.toString(selectionSort(arr)));
+
+        //main condition is that elements should be from 1 to N
+        int[] arr = {3,4,5,1,2};
+        System.out.println(Arrays.toString(cyclicSort(arr)));
     }
 
     static  int getMaxIndex(int[] arr, int start, int end){
@@ -25,16 +27,15 @@ public class SelectionSort {
         arr[second] = temp;
     }
 
-    static int[] selectionSort(int[] arr){
-        if(arr == null || arr.length == 0){
-            return new int[]{};
-        }
-
-
-        for(int i = 0; i < arr.length; i++){
-            int last = arr.length - i - 1;
-            int maxIndex = getMaxIndex(arr,0,last);
-            swap(arr, maxIndex, last);
+    static int[] cyclicSort(int[] arr){
+        int i = 0;
+        while (i < arr.length) {
+            int correctIndex = arr[i] - 1;
+            if (arr[i] != arr[correctIndex]) {
+                swap(arr, i , correctIndex);
+            } else {
+                i++;
+            }
         }
 
         return arr;
