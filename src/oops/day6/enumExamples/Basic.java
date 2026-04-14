@@ -12,6 +12,11 @@ public class Basic {
 
         }
 
+        // this is not public or protected, only private or default
+        // why? we don't want to create new objects
+        // this is not the enum concept, that's why
+        // internally: public static final Week Monday = new Week();
+
         Week() {
             System.out.println("Constructor called for " + this);
         }
@@ -20,18 +25,14 @@ public class Basic {
         public void hello() {
             System.out.println("hey how are you");
         }
-        // this is not public or protected, only private or default
-        // why? we dont want to create new objects
-        // this is not the enum concept, thats why
 
-        // internally: public static final Week Monday = new Week();
     }
 
     public static void main(String[] args) {
         Week week;
         week = Week.Monday;
         week.hello();
-        System.out.println(Week.valueOf("Monday"));
+        System.out.println(Week.valueOf("Tuesday"));
 //        for(Week day : Week.values()) {
 //            System.out.println(day);
 //        }
