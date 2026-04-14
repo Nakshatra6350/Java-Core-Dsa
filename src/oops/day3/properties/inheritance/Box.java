@@ -1,6 +1,6 @@
 package oops.day3.properties.inheritance;
 
-public class Box {
+public class Box { // final classes cant be inherited
     private double l;
     double h;
     double w;
