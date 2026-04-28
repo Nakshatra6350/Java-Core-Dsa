@@ -48,13 +48,24 @@ public class Main {
 
 
         //circular linked list
-        CircularLinkedLists cll = new CircularLinkedLists();
-        cll.insert(23);
-        cll.insert(32);
-        cll.insert(424);
-        cll.insert(333);
-        cll.delete(32);
-        cll.delete(23);
-        cll.display();
+//        CircularLinkedLists cll = new CircularLinkedLists();
+//        cll.insert(23);
+//        cll.insert(32);
+//        cll.insert(424);
+//        cll.insert(333);
+//        cll.delete(32);
+//        cll.delete(23);
+//        cll.display();
+
+
+
+
+        LL list = new LL();
+        list.insertFirst(12);
+        list.insertLast(10);
+        list.insert(8,1);
+        list.display();
+        list.insertUsingRecursion(100, 2);
+        list.display();
     }
 }
